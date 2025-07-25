@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomeloSoft Stock Management Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>PomeloSoft Stock Management Portal</h1>
+            <a href="add-product.html" class="btn btn-primary add-product-btn">
+                <i class="fas fa-plus"></i> Add New Product
+            </a>
+        </header>
+        <div id="notification-area" class="notification"></div>
+
+        <div class="content-wrapper">
+            <aside class="filters-sidebar">
+                <h2>Filters</h2>
+                <div class="filter-group search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search by Name">
+                </div>
+                <div class="filter-group">
+                    <div class="filter-header">
+                        <h3>Categories</h3>
+                        <div class="filter-actions">
+                            <button id="deactivate-category-btn" class="add-btn" title="Deactivate Category">-</button>
+                            <button id="add-category-btn" class="add-btn" title="Add New Category">+</button>
+                        </div>
+                    </div>
+                    <div id="category-filters">Loading...</div>
+                </div>
+                <div class="filter-group">
+                    <h3>Brands</h3>
+                    <div id="brand-filters">Loading...</div>
+                </div>
+                <div class="filter-group">
+                    <h3>Options</h3>
+                    <div class="toggle-switch-container">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="show-inactive-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label">Show Inactive Products</span>
+                    </div>
+                </div>
+            </aside>
+            <main class="product-listing">
+                <div id="product-grid" class="product-grid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Add Category Modal -->
+    <div id="add-category-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Category</h2>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="add-category-form">
+                    <div id="modal-notification" class="notification"></div>
+                    <div class="form-group">
+                        <label for="category-name">Category Name</label>
+                        <input type="text" id="category-name" name="name" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="cancel-category-btn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Deactivate Category Modal -->
+    <div id="deactivate-category-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Deactivate Category</h2>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="deactivate-category-form">
+                    <div id="deactivate-modal-notification" class="notification"></div>
+                    <div class="form-group">
+                        <label for="category-to-deactivate">Select Category</label>
+                        <select id="category-to-deactivate" name="categoryId" required>
+                            <option value="">Loading categories...</option>
+                        </select>
+                    </div>
+                    <p>Deactivating a category will also hide all products within it. Are you sure?</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="cancel-deactivate-btn">Cancel</button>
+                        <button type="submit" class="btn btn-danger">Deactivate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

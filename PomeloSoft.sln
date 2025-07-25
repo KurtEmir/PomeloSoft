@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomeloSoft.API", "PomeloSoft.API\PomeloSoft.API.csproj", "{4FB8A359-1CA0-4454-A76D-20F909E60C82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomeloSoft.Data", "PomeloSoft.Data\PomeloSoft.Data.csproj", "{6AFDFAE4-1800-4C0D-97B6-980F24EFA11B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FB8A359-1CA0-4454-A76D-20F909E60C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB8A359-1CA0-4454-A76D-20F909E60C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB8A359-1CA0-4454-A76D-20F909E60C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB8A359-1CA0-4454-A76D-20F909E60C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AFDFAE4-1800-4C0D-97B6-980F24EFA11B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFDFAE4-1800-4C0D-97B6-980F24EFA11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AFDFAE4-1800-4C0D-97B6-980F24EFA11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AFDFAE4-1800-4C0D-97B6-980F24EFA11B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
