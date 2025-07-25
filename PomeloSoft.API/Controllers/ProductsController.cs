@@ -134,6 +134,23 @@ public class ProductsController : ControllerBase
         return NoContent();
     }
 
+    [HttpDelete("by-name/{name}")]
+    [SwaggerOperation(Summary = "Deactivate a Product by Name (Soft Delete)")]
+    public async Task<IActionResult> DeleteProductByName(string name)
+    {
+        _logger.LogInformation("Deleting product with name {ProductName}", name);
+        // TODO: Get the actual user ID from authentication
+        var modifierId = Guid.NewGuid();
+        var response = await _productService.DeleteByNameAsync(name, modifierId);
+        
+        if (!response.Success)
+        {
+            return NotFound(response.Message);
+        }
+
+        return NoContent();
+    }
+
 
     [HttpPut("{id}/restore")]
     [SwaggerOperation(Summary = "Restore a Product")]

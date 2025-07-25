@@ -10,3 +10,4 @@
 /Users/emir/Projects/PomeloSoft/PomeloSoft.Data/obj/Debug/net9.0/refint/PomeloSoft.Data.dll
 /Users/emir/Projects/PomeloSoft/PomeloSoft.Data/obj/Debug/net9.0/PomeloSoft.Data.pdb
 /Users/emir/Projects/PomeloSoft/PomeloSoft.Data/obj/Debug/net9.0/ref/PomeloSoft.Data.dll
+/Users/emir/Projects/PomeloSoft/PomeloSoft.Data/obj/Debug/net9.0/PomeloSoft.Data.sourcelink.json

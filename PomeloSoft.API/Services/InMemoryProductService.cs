@@ -22,6 +22,22 @@ public class InMemoryProductService : InMemoryService<Product, int>, IProductSer
         
         return base.CreateAsync(product, creatorId);
     }
-    
-    
+
+    public Task<ServiceResponse<bool>> DeleteByNameAsync(string name, Guid modifierId)
+    {
+        var item = _items.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase) && p.IsActive);
+        if (item == null)
+        {
+            return Task.FromResult(ServiceResponse<bool>.CreateFailure("Product not found."));
+        }
+
+        item.IsActive = false;
+        if (item is BaseEntity<int> baseEntity)
+        {
+            baseEntity.UpdatedDate = DateTimeOffset.UtcNow;
+            baseEntity.LastModifierId = modifierId;
+        }
+        
+        return Task.FromResult(ServiceResponse<bool>.CreateSuccess(true));
+    }
 } 

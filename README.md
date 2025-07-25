@@ -61,6 +61,7 @@ The base URL for all endpoints is `http://localhost:5008/api`.
 | `GET`  | `/Products/{id}`          | Retrieves a specific product by its ID.           |
 | `PUT`  | `/Products/{id}`          | Updates an existing product's details.            |
 | `DELETE`| `/Products/{id}`          | Deactivates a product (soft delete).              |
+| `DELETE`| `/Products/by-name/{name}`| Deactivates a product by its name (soft delete).  |
 | `PUT`  | `/Products/{id}/restore`  | Restores an inactive product to be active again.  |
 
 ---
@@ -122,4 +123,12 @@ curl -X PUT "http://localhost:5008/api/Products/1" \
 
 ```bash
 curl -X DELETE "http://localhost:5008/api/Products/1"
+```
+
+### Deactivate a Product by Name (Soft Delete)
+
+*This marks the product named "Logitech MX Keys S" as inactive. Note that the name in the URL must be URL-encoded (e.g., spaces become `%20`).*
+
+```bash
+curl -X DELETE "http://localhost:5008/api/Products/by-name/Logitech%20MX%20Keys%20S"
 ``` 

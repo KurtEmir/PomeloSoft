@@ -49,3 +49,4 @@
 /Users/emir/Projects/PomeloSoft/PomeloSoft.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/emir/Projects/PomeloSoft/PomeloSoft.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/emir/Projects/PomeloSoft/PomeloSoft.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Annotations.dll
+/Users/emir/Projects/PomeloSoft/PomeloSoft.API/obj/Debug/net9.0/PomeloSoft.API.sourcelink.json
